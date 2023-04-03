@@ -12,12 +12,13 @@ spec:
       labels:
         app: nginx
     spec:
-      initContainers:
-      - name: init-busybox
-        image: busybox
-        command: ['sh', '-c', 'until nslookup nginx; do echo waiting for nginx; sleep 2; done;']
       containers:
       - name: nginx
         image: nginx
         ports:
         - containerPort: 80
+      initContainers:
+      - name: init-busybox
+        image: busybox
+        command: ['sh', '-c', 'until nslookup nginx; do echo waiting for nginx; sleep 2; done;']
+      
