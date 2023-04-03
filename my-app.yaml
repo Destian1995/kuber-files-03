@@ -4,6 +4,7 @@ metadata:
   name: my-app
 spec:
   replicas: 1
+  progressDeadlineSeconds: 600
   selector:
     matchLabels:
       app: my-app
