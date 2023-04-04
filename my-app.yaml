@@ -19,4 +19,4 @@ spec:
         ports:
         - containerPort: 80
       - name: multitool
-        image: praqma/network-multitool
+        image: wbitt/network-multitool
