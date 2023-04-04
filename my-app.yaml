@@ -14,12 +14,12 @@ spec:
         app: my-app
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 9000
       - name: multitool
         image: wbitt/network-multitool
         ports:
         - containerPort: 8080
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 9000
 
