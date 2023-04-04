@@ -18,19 +18,5 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
-        resources:
-          limits:
-            cpu: "1"
-            memory: "512Mi"
-          requests:
-            cpu: "100m"
-            memory: "256Mi"
       - name: multitool
         image: praqma/network-multitool
-        resources:
-          limits:
-            cpu: "1"
-            memory: "512Mi"
-          requests:
-            cpu: "100m"
-            memory: "256Mi"
