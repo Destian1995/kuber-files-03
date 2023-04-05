@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -18,7 +17,6 @@ spec:
         ports:
         - containerPort: 80
       initContainers:
-      - name: init-busybox
+      - name: wait-for-service
         image: busybox
-        command: ['sh', '-c', 'until nslookup nginx; do echo waiting for nginx; sleep 2; done;']
-      
+        command: ['sh', '-c', 'until nslookup nginx-service; do echo waiting for nginx-service; sleep 2; done;']
